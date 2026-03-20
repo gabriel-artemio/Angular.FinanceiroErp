@@ -1,0 +1,51 @@
+<div class="container-fluid p-0">
+  <div class="row g-0">
+
+    <!-- SIDEBAR -->
+    <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+      <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+
+        <a routerLink="/home"
+          class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+          <span class="fs-5 d-none d-sm-inline"><b>GoGela | Sistema</b></span>
+        </a>
+
+        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start">
+
+          <li>
+            <a routerLink="/home" class="nav-link px-3 text-white">
+              <i class="bi bi-graph-up"></i> Dashboard
+            </a>
+          </li>
+
+          <li>
+            <a routerLink="/pacientes" class="nav-link px-3 text-white">
+              <i class="bi bi-people-fill"></i> Pacientes
+            </a>
+          </li>
+
+          <li>
+            
+            <a routerLink="/parametrizacao" class="nav-link px-3 text-white">
+              <i class="bi bi-gear"></i> Parametrização
+            </a>
+          </li>
+
+          <li>
+            <a routerLink="/parametrizacao" class="nav-link px-3 text-white">
+              <button class="btn btn-danger" (click)="logout()"><b>Sair <i class="bi bi-box-arrow-in-right"></i></b></button>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+    <!-- CONTEÚDO -->
+    <div class="col p-4">
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+</div>

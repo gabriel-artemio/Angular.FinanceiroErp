@@ -1,0 +1,46 @@
+<div class="container mt-4">
+
+  <h3>Configuração de Horários</h3>
+
+  <div class="card p-3">
+
+    <div class="row fw-bold border-bottom pb-2 mb-2">
+      <div class="col-md-3">Dia</div>
+      <div class="col-md-3">Ativo</div>
+      <div class="col-md-3">Hora Inicial</div>
+      <div class="col-md-3">Hora Final</div>
+    </div>
+
+    <div class="row align-items-center mb-2" *ngFor="let dia of diasSemana">
+
+      <!-- Nome do dia -->
+      <div class="col-md-3">
+        {{dia.nome}}
+      </div>
+
+      <!-- Checkbox -->
+      <div class="col-md-3">
+        <input type="checkbox" [(ngModel)]="dia.checked">
+      </div>
+
+      <!-- Hora inicial -->
+      <div class="col-md-3">
+        <input type="time"
+               class="form-control"
+               [(ngModel)]="dia.horaInicio"
+               [disabled]="!dia.checked">
+      </div>
+
+      <!-- Hora final -->
+      <div class="col-md-3">
+        <input type="time"
+               class="form-control"
+               [(ngModel)]="dia.horaFim"
+               [disabled]="!dia.checked">
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

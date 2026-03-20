@@ -1,0 +1,23 @@
+<div class="container mt-5" style="max-width:400px">
+
+  <h3 class="mb-4">GoGela | Login</h3>
+
+  <div class="mb-3">
+    <label>Usuário</label>
+    <input class="form-control" [(ngModel)]="username">
+  </div>
+
+  <div class="mb-3">
+    <label>Senha</label>
+    <input type="password" class="form-control" [(ngModel)]="password">
+  </div>
+
+  <button class="btn btn-primary w-100" (click)="login()">
+    Entrar
+  </button>
+
+  <div class="text-danger mt-3" *ngIf="error">
+    {{error}}
+  </div>
+
+</div>
