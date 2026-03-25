@@ -13,6 +13,12 @@ export class Login {
   password = '';
   error = '';
 
+  showPassword = false;
+
+  togglePassword() {
+    this.showPassword = !this.showPassword;
+  }
+
   constructor(
     private auth: Auth,
     private router: Router
