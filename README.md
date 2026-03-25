@@ -1,1 +1,1 @@
-# GoGela - Frontend do TCC
+# SmartGela - Frontend do TCC
